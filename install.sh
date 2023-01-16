@@ -1,0 +1,1 @@
+helm install prometheus-adapter prometheus-community/prometheus-adapter -f values.yaml -n prometheus-adapter --create-namespace
