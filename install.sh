@@ -1,1 +1,2 @@
-helm install prometheus-adapter prometheus-community/prometheus-adapter -f values.yaml -n prometheus-adapter --create-namespace
+helm template prometheus-adapter prometheus-community/prometheus-adapter -f values.yaml -n prometheus-adapter --create-namespace --api-versions apiregistration.k8s.io/v1 > template.yaml
+kubectl apply -f template.yaml
